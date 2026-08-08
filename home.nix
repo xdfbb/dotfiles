@@ -8,6 +8,10 @@ in
   home.username = user;
   home.homeDirectory = "/Users/${user}";
   home.stateVersion = "24.11";
+  # Disable home-manager's man page generation: it triggers an upstream nixpkgs
+  # warning from make-options-doc about builtins.derivation referencing a store
+  # path without proper context.
+  manual.manpages.enable = false;
   home.packages = with pkgs; [
     # cli i use constantly
     ripgrep   # fast search
