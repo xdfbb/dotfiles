@@ -49,6 +49,11 @@ in
     settings = {
       add_newline = false;
       format = "$directory$git_branch$git_status$cmd_duration$line_break$character";
+      directory = {
+        truncation_length = 0;
+        truncate_to_repo = false;
+        home_symbol = config.home.homeDirectory;
+      };
       character = {
         success_symbol = "[❯](purple)";
         error_symbol = "[❯](red)";
