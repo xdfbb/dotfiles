@@ -56,7 +56,9 @@ Change the host label or CPU architecture if needed, and read the Homebrew clean
 4. Runs the first `darwin-rebuild switch`.
    It fetches the `darwin-rebuild` tool from the nix-darwin 26.05 release branch, then applies this repo's locked flake config.
 
-After that, `darwin-rebuild` exists and you're on the normal workflow below.
+After that, you're on the normal workflow below. `rebuild.sh` resolves
+`darwin-rebuild` before calling `sudo -H`, and falls back to the pinned
+nix-darwin tool if needed.
 
 ### Validate without applying
 
