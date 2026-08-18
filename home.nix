@@ -20,6 +20,8 @@ in
     jq        # json on the command line
     lazygit
     neovim
+    # node.js (LTS)
+    nodejs_24
     # the font everything renders in
     nerd-fonts.hack
   ];
